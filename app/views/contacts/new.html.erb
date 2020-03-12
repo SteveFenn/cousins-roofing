@@ -1,0 +1,12 @@
+<% @contact.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+<% end %>
+
+<%= form_with model: @contact, local: true do |f| %>
+  <%= f.text_field :name %>
+  <%= f.telephone_field :telephone %>
+  <%= f.email_field :email %>
+  <%= f.text_area :message %>
+  <%= f.submit "Create" %>
+<% end %>
+
