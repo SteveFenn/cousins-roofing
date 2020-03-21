@@ -5,9 +5,12 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    return render :new, status: :unprocessable_entity unless @contact.valid?
-    @contact.deliver_email_later
-    render :create, status: :created
+    if @contact.save
+      @contact.deliver_email_later
+      redirect_to root_path, notice: 'Message successfully sent.'
+    else
+      return render :new, status: :unprocessable_entity
+    end
   end
 
   private

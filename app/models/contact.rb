@@ -1,9 +1,10 @@
-class Contact
-  include ActiveModel::Model
-  attr_accessor :name, :telephone, :email, :message
-  validates_presence_of :name, :telephone, :email, :message
+class Contact < ApplicationRecord
+  validates :name, presence: true
+  validates :telephone, presence: true
+  validates :email, presence: true, format: { with: Devise.email_regexp }
+  validates :message, presence: true
 
   def deliver_email_later
-    ContactMailer.notify(self.to_json).deliver_later
+    ContactMailer.notify(self).deliver_later
   end
 end
