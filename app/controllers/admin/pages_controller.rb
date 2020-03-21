@@ -2,7 +2,7 @@ class Admin::PagesController < Admin::BaseController
   before_action :set_page, only: [:edit, :update, :destroy]
 
   def index
-    @pages = Page.all
+    @pages = Page.order(:title).page params[:paging]
   end
 
   def new

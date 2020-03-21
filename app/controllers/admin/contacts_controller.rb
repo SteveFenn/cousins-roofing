@@ -1,6 +1,6 @@
 class Admin::ContactsController < Admin::BaseController
   def index
-    @contacts = Contact.all
+    @contacts = Contact.order(created_at: :desc).page params[:paging]
   end
 
   def show

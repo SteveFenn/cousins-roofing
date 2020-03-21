@@ -1,3 +1,5 @@
+<%= page_entries_info @pages %>
+
 <table>
   <thead>
     <tr>
@@ -17,6 +19,6 @@
   </tbody>
 </table>
 
-<br>
+<%= paginate @pages %>
 
 <%= link_to 'New', new_admin_page_path %>
