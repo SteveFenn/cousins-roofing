@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= link_to contact.name, admin_contact_path(contact) %></td>
+        <td><%= contact.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

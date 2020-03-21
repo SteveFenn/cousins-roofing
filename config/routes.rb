@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :pages, except: [:show]
+    resources :contacts, only: [:index, :show]
   end
 
   resources :contacts, only: [:new, :create]
