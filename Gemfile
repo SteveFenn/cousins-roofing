@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'mailcatcher'
 # Devise for admin area
 gem 'devise'
+# Friendly ID for page slugs
+gem 'friendly_id'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
