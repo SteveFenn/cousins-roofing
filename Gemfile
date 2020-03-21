@@ -19,7 +19,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Mailcatcher for email in local dev
 gem 'mailcatcher'
-
+# Devise for admin area
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
