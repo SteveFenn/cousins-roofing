@@ -21,6 +21,8 @@ gem 'mailcatcher'
 gem 'devise'
 # Friendly ID for page slugs
 gem 'friendly_id'
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 4.0'
 # Used for pagination in admin section
 gem 'kaminari'
 # For admin page design
