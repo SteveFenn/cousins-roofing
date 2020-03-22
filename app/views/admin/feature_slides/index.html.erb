@@ -1,0 +1,24 @@
+<%= page_entries_info @slides %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |slide| %>
+      <tr>
+        <td><%= slide.title %></td>
+        <td><%= link_to 'Edit', edit_admin_feature_slide_path(slide) %></td>
+        <td><%= link_to 'Destroy', admin_feature_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @slides %>
+
+<%= link_to 'New', new_admin_feature_slide_path %>

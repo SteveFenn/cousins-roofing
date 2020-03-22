@@ -1,0 +1,22 @@
+<%= form_with(model: @slide, local: true, url: admin_feature_slide_path(@slide), method: 'patch') do |f| %>
+  <% if @slide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slide.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+        <% @slide.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :title %>
+  <%= f.file_field :image %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', admin_feature_slides_path %>

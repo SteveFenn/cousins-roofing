@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_22_094235) do
+ActiveRecord::Schema.define(version: 2020_03_22_100947) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,12 @@ ActiveRecord::Schema.define(version: 2020_03_22_094235) do
     t.string "telephone", null: false
     t.string "email", null: false
     t.text "message", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "feature_slides", force: :cascade do |t|
+    t.string "title", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
