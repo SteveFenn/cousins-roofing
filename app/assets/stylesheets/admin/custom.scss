@@ -1,0 +1,171 @@
+/* Layout */
+
+.navbar-link {
+  color: #ffffff;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+
+  &.navbar-logout {
+    padding-right: 15px;
+  }
+
+  &.navbar-brand {
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  }
+
+  &:hover {
+    color: #007bff;
+    text-decoration: none;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+
+  .nav-link {
+    font-weight: 500;
+    color: #333;
+
+    &:hover {
+      color: #007bff;
+    }
+
+    span {
+      margin-left: .75rem;
+    }
+  }
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main {
+  padding-top: 68px;
+}
+
+/* Flash messages */
+
+.alert {
+  text-align: left;
+
+  &.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+  &.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+  }
+
+  &.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+  }
+
+  &.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+  }
+}
+
+/* Scaffolds */
+
+.display-header-container {
+  h1 {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  padding-bottom: 1.5rem;
+}
+
+.table {
+  td.action {
+    width: 10%;
+    a {
+      color: #333;
+
+      &:hover {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      i {
+        margin-right: 0.4rem;
+      }
+    }
+  }
+}
+
+.pagination-container {
+  display: flex;
+
+  .pagination-info {
+    padding: 0.5rem 0;
+    width: 50%;
+  }
+
+  .pagination-nav {
+    width: 50%;
+    text-align: right;
+
+    .pagination {
+      justify-content: flex-end;
+
+      .page-link {
+        color: #333;
+      }
+
+      .page-item.active .page-link {
+        background: #e9ecef;
+        border-color: #dee2e6;
+        color: #333;
+      }
+    }
+  }
+}
+
+/* Forms */
+.form-alert ul {
+  margin-bottom: 0;
+}
+
+input[type="file"].form-control {
+  height: auto;
+  padding: 1rem 0.75rem;
+}
+
+.image-preview img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Dashboard */
+
+.card-header i {
+  color: rgba(0, 0, 0, 0.25);
+  margin-right: .75rem;
+}

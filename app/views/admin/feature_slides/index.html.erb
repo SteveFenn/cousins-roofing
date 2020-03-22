@@ -1,24 +1,31 @@
-<%= page_entries_info @slides %>
+<%= render partial: "partials/header", locals: { text: 'Slides' } %>
 
-<table>
-  <thead>
+<table class="table table-striped">
+  <thead class="thead-light">
     <tr>
       <th>Title</th>
       <th colspan="2"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @slides.each do |slide| %>
       <tr>
         <td><%= slide.title %></td>
-        <td><%= link_to 'Edit', edit_admin_feature_slide_path(slide) %></td>
-        <td><%= link_to 'Destroy', admin_feature_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="action">
+          <%= link_to edit_admin_feature_slide_path(slide) do %>
+            <%= fa_icon "cog" %> edit
+          <% end %>
+        </td>
+        <td class="action">
+          <%= link_to admin_feature_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <%= fa_icon "trash" %> delete
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= paginate @slides %>
+<%= render partial: "partials/pagination", locals: { items: @slides } %>
 
-<%= link_to 'New', new_admin_feature_slide_path %>
+<%= link_to 'Create new slide', new_admin_feature_slide_path, class: 'btn btn-primary btn-lg' %>

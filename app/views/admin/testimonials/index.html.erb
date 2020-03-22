@@ -1,24 +1,31 @@
-<%= page_entries_info @testimonials %>
+<%= render partial: "partials/header", locals: { text: 'Testimonials' } %>
 
-<table>
-  <thead>
+<table class="table table-striped">
+  <thead class="thead-light">
     <tr>
       <th>Author</th>
       <th colspan="2"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @testimonials.each do |testimonial| %>
       <tr>
         <td><%= testimonial.author %></td>
-        <td><%= link_to 'Edit', edit_admin_testimonial_path(testimonial) %></td>
-        <td><%= link_to 'Destroy', admin_testimonial_path(testimonial), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="action">
+          <%= link_to edit_admin_testimonial_path(testimonial) do %>
+            <%= fa_icon "cog" %> edit
+          <% end %>
+        </td>
+        <td class="action">
+          <%= link_to admin_testimonial_path(testimonial), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <%= fa_icon "trash" %> delete
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= paginate @testimonials %>
+<%= render partial: "partials/pagination", locals: { items: @testimonials } %>
 
-<%= link_to 'New', new_admin_testimonial_path %>
+<%= link_to 'Create new testimonial', new_admin_testimonial_path, class: 'btn btn-primary btn-lg' %>

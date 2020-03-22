@@ -1,24 +1,31 @@
-<%= page_entries_info @pages %>
+<%= render partial: "partials/header", locals: { text: 'Pages' } %>
 
-<table>
-  <thead>
+<table class="table table-striped">
+  <thead class="thead-light">
     <tr>
       <th>Title</th>
       <th colspan="2"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @pages.each do |page| %>
       <tr>
         <td><%= page.title %></td>
-        <td><%= link_to 'Edit', edit_admin_page_path(page) %></td>
-        <td><%= link_to 'Destroy', admin_page_path(page), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="action">
+          <%= link_to edit_admin_page_path(page) do %>
+            <%= fa_icon "cog" %> edit
+          <% end %>
+        </td>
+        <td class="action">
+          <%= link_to admin_page_path(page), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <%= fa_icon "trash" %> delete
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= paginate @pages %>
+<%= render partial: "partials/pagination", locals: { items: @pages } %>
 
-<%= link_to 'New', new_admin_page_path %>
+<%= link_to 'Create new page', new_admin_page_path, class: 'btn btn-primary btn-lg' %>

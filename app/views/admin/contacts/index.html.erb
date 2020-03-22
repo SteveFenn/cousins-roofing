@@ -1,21 +1,26 @@
-<%= page_entries_info @contacts %>
+<%= render partial: "partials/header", locals: { text: 'Contacts' } %>
 
-<table>
-  <thead>
+<table class="table table-striped">
+  <thead class="thead-light">
     <tr>
       <th>Name</th>
       <th>Email</th>
+      <th></th>
     </tr>
   </thead>
-
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= link_to contact.name, admin_contact_path(contact) %></td>
+        <td><%= contact.name %></td>
         <td><%= contact.email %></td>
+        <td class="action">
+          <%= link_to admin_contact_path(contact) do %>
+            <%= fa_icon "envelope" %> view
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= paginate @contacts %>
+<%= render partial: "partials/pagination", locals: { items: @contacts } %>

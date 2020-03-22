@@ -1,4 +1,48 @@
-<%= link_to 'Contacts', admin_contacts_path %>
-<%= link_to 'Slides', admin_feature_slides_path %>
-<%= link_to 'Pages', admin_pages_path %>
-<%= link_to 'Testimonials', admin_testimonials_path %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <%= fa_icon "file" %> Pages
+        </div>
+        <div class="card-body">
+          <p class="card-text">Update the content for each of the pages on the website.</p>
+          <%= link_to "View Pages", admin_pages_path, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <%= fa_icon "image" %> Slides
+        </div>
+        <div class="card-body">
+          <p class="card-text">Administer the featured slides that appear on the homepage.</p>
+          <%= link_to "View Slides", admin_feature_slides_path, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <%= fa_icon "quote-right" %> Testimonials
+        </div>
+        <div class="card-body">
+          <p class="card-text">Add more testimonials or remove old ones that appear on the website.</p>
+          <%= link_to "View Testimonials", admin_testimonials_path, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <%= fa_icon "envelope" %> Contacts
+        </div>
+        <div class="card-body">
+          <p class="card-text">View the emails that have been sent by users of the website.</p>
+          <%= link_to "View Contacts", admin_contacts_path, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

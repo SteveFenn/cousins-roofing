@@ -5,11 +5,58 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'admin' %>
+    <%= stylesheet_link_tag "admin", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "admin", 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <%= link_to "Dashboard", admin_root_path, class: "navbar-link navbar-brand col-sm-3 col-md-2 mr-0" %>
+      <%= link_to("Log out", destroy_admin_session_path, method: :delete, class: "navbar-link navbar-logout") if admin_signed_in? %>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <%= link_to admin_root_path, class: "nav-link" do %>
+                  <%= fa_icon "columns" %>
+                  <%= content_tag(:span, "Dashboard") %>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to admin_pages_path, class: "nav-link" do %>
+                  <%= fa_icon "file" %>
+                  <%= content_tag(:span, "Pages") %>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to admin_feature_slides_path, class: "nav-link" do %>
+                  <%= fa_icon "image" %>
+                  <%= content_tag(:span, "Slides") %>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to admin_testimonials_path, class: "nav-link" do %>
+                  <%= fa_icon "quote-right" %>
+                  <%= content_tag(:span, "Testimonials") %>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <%= link_to admin_contacts_path, class: "nav-link" do %>
+                  <%= fa_icon "envelope" %>
+                  <%= content_tag(:span, "Contacts") %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <%= render "partials/flash_messages" %>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
