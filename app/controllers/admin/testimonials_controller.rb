@@ -1,4 +1,4 @@
-class Admin::PagesController < Admin::BaseController
+class Admin::TestimonialsController < Admin::BaseController
   before_action :set_testimonial, only: [:edit, :update, :destroy]
 
   def index
@@ -38,7 +38,7 @@ class Admin::PagesController < Admin::BaseController
   private
 
   def set_testimonial
-    @Testimonial = Testimonial.find(params[:id])
+    @testimonial = Testimonial.find(params[:id])
   end
 
   def testimonial_params

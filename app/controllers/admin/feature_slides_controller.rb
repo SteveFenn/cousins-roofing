@@ -37,7 +37,7 @@ class Admin::FeatureSlidesController < Admin::BaseController
 
   private
 
-  def set_page
+  def set_slide
     @slide = FeatureSlide.find(params[:id])
   end
 
