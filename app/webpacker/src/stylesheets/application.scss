@@ -505,6 +505,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1em;
 }
 
+.trix-content {
+  padding: 2rem 0;
+}
+
 .cms-content h1,
 .cms-content h2,
 .cms-content h3,
@@ -564,7 +568,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: #6e2878;
   font-size: 1.6em;
-  margin: 0 0 3em 0;
+  padding: 0 0 3em 0;
+  margin: 0;
 }
 
 .form-row {
@@ -580,7 +585,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
 }
 
-.form-field input[type='text'], .form-field textarea {
+.form-field input[type='text'],
+.form-field textarea,
+.form-field input[type='tel'],
+.form-field input[type='email'] {
   border: 2px solid #6e2878;
   background: #ffffff;
   padding: 1.3em;
@@ -598,7 +606,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.form-row button[type="submit"] {
+.form-row input[type="submit"] {
   border: 2px solid #000000;
   background: #6e2878;
   color: #ffffff;
@@ -622,6 +630,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-row-multiple .form-field:first-child {
   margin-right: 2em;
+}
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin-bottom: 3rem;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
 /* Framework */

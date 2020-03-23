@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :welcome, only: [:index]
+  resources :pages, only: [:show]
   resources :contacts, only: [:new, :create]
 
   root to: "welcome#index"

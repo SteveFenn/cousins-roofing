@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       @contact.deliver_email_later
-      redirect_to root_path, notice: 'Message successfully sent.'
+      render :create
     else
       return render :new, status: :unprocessable_entity
     end

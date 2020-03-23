@@ -1,12 +1,51 @@
-<% @contact.errors.full_messages.each do |message| %>
-  <li><%= message %></li>
-<% end %>
+<%= render partial: 'partials/internal_header', locals: { title: 'Contact Us' } %>
 
-<%= form_with model: @contact, local: true do |f| %>
-  <%= f.text_field :name %>
-  <%= f.telephone_field :telephone %>
-  <%= f.email_field :email %>
-  <%= f.text_area :message %>
-  <%= f.submit "Create" %>
-<% end %>
+<div class="cms-content">
+  <div class="inner">
+    <div class="cms-content-wrapper">
+      <p>If you would like a FREE no obligation quote then please leave us a message via our contact form or you can</p>
+      <p>Call us on: <a href="tel:07774324872"><strong>07774 324872</strong></a></p>
+      <p>Email us at: <a href="mailto:info@cousinsroofing.co.uk"><strong>info@cousinsroofing.co.uk</strong></a></p>
+    </div>
+  </div>
+</div>
+<div class="grey-arrow"></div>
+<div class="contact-form">
+  <div class="inner">
+    <div class="contact-form-wrapper">
+      <h3>Hello! Please fill in our contact form and we'll be in touch asap.</h3>
+      <%= render partial: 'partials/errors', locals: { object: @contact } %>
+      <%= form_with model: @contact, local: true do |f| %>
+        <div class="form-row form-row-multiple">
+          <div class="form-field">
+            <label>Name</label>
+            <%= f.text_field :name %>
+          </div>
+          <div class="form-field">
+            <label>Telephone</label>
+            <%= f.telephone_field :telephone %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Email</label>
+            <%= f.email_field :email %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Your Message</label>
+            <%= f.text_area :message %>
+          </div>
+        </div>
+        <div class="form-row">
+          <p>Your details will only be used by Cousins Roofing to contact you regarding your query and will not be shared with third parties</p>
+        </div>
+        <div class="form-row">
+          <%= f.submit "Send Enquiry", class: 'button' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
