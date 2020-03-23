@@ -1,0 +1,21 @@
+<%= render partial: "partials/header", locals: { text: "Change your password" } %>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "partials/errors", object: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="form-group">
+    <%= f.label :password, "New password" %><br />
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirm new password" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Change my password", class: 'btn btn-lg btn-primary' %>
+    <%= link_to "Login", new_admin_session_path, class: 'btn btn-lg btn-secondary' %>
+  </div>
+<% end %>

@@ -18,38 +18,7 @@
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <%= link_to admin_root_path, class: "nav-link" do %>
-                  <%= fa_icon "columns" %>
-                  <%= content_tag(:span, "Dashboard") %>
-                <% end %>
-              </li>
-              <li class="nav-item">
-                <%= link_to admin_pages_path, class: "nav-link" do %>
-                  <%= fa_icon "file" %>
-                  <%= content_tag(:span, "Pages") %>
-                <% end %>
-              </li>
-              <li class="nav-item">
-                <%= link_to admin_feature_slides_path, class: "nav-link" do %>
-                  <%= fa_icon "image" %>
-                  <%= content_tag(:span, "Slides") %>
-                <% end %>
-              </li>
-              <li class="nav-item">
-                <%= link_to admin_testimonials_path, class: "nav-link" do %>
-                  <%= fa_icon "quote-right" %>
-                  <%= content_tag(:span, "Testimonials") %>
-                <% end %>
-              </li>
-              <li class="nav-item">
-                <%= link_to admin_contacts_path, class: "nav-link" do %>
-                  <%= fa_icon "envelope" %>
-                  <%= content_tag(:span, "Contacts") %>
-                <% end %>
-              </li>
-            </ul>
+            <% render partial: 'partials/admin_sidebar' if admin_signed_in? %>
           </div>
         </nav>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">

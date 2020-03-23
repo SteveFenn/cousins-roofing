@@ -1,0 +1,15 @@
+<%= render partial: "partials/header", locals: { text: "Forgot your password?" } %>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "partials/errors", object: resource %>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Send", class: 'btn btn-lg btn-primary' %>
+    <%= link_to "Login", new_admin_session_path, class: 'btn btn-lg btn-secondary' %>
+  </div>
+<% end %>

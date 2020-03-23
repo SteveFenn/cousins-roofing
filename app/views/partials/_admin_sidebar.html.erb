@@ -1,0 +1,32 @@
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <%= link_to admin_root_path, class: "nav-link" do %>
+      <%= fa_icon "columns" %>
+      <%= content_tag(:span, "Dashboard") %>
+    <% end %>
+  </li>
+  <li class="nav-item">
+    <%= link_to admin_pages_path, class: "nav-link" do %>
+      <%= fa_icon "file" %>
+      <%= content_tag(:span, "Pages") %>
+    <% end %>
+  </li>
+  <li class="nav-item">
+    <%= link_to admin_feature_slides_path, class: "nav-link" do %>
+      <%= fa_icon "image" %>
+      <%= content_tag(:span, "Slides") %>
+    <% end %>
+  </li>
+  <li class="nav-item">
+    <%= link_to admin_testimonials_path, class: "nav-link" do %>
+      <%= fa_icon "quote-right" %>
+      <%= content_tag(:span, "Testimonials") %>
+    <% end %>
+  </li>
+  <li class="nav-item">
+    <%= link_to admin_contacts_path, class: "nav-link" do %>
+      <%= fa_icon "envelope" %>
+      <%= content_tag(:span, "Contacts") %>
+    <% end %>
+  </li>
+</ul>
