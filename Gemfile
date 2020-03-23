@@ -13,8 +13,6 @@ gem 'puma', '~> 4.1'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Mailcatcher for email in local dev
-gem 'mailcatcher'
 # Devise for admin area
 gem 'devise'
 # Friendly ID for page slugs

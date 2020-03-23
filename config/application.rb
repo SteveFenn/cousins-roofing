@@ -31,5 +31,10 @@ module CousinsRoofing
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Devise email layout same as application
+    config.to_prepare do
+      Devise::Mailer.layout 'mailer'
+    end
   end
 end
