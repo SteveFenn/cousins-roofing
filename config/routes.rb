@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     resources :feature_slides, except: [:show]
   end
 
+  resources :welcome, only: [:index]
   resources :contacts, only: [:new, :create]
 
-  root to: "contacts#new"
+  root to: "welcome#index"
 end

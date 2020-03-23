@@ -1,0 +1,127 @@
+<div class="feature">
+  <div class="inner">
+    <div class="slider">
+      <div class="slick-slider">
+        <% @slides.each do |slide| %>
+          <%= image_tag(url_for(slide.image), alt: slide.title) if slide.image.attached? %>
+        <% end %>
+      </div>
+    </div>
+    <div class="feature-text">
+      <h2>Over 40 Years Successful Trading</h2>
+      <p>Cousins Roofing is a leading Buckinghamshire based family run business with a broad range of expertise in all aspects of roofing services</p>
+      <%= link_to 'Get a free quote', new_contact_path, class: 'button' %>
+    </div>
+  </div>
+</div>
+<div class="features">
+  <div class="inner">
+    <ul>
+      <li>
+        <%= image_pack_tag 'media/images/icon_materials.png', alt: 'Best Materials' %>
+        <h3>Only the Best Materials</h3>
+      </li>
+      <li>
+        <%= image_pack_tag 'media/images/icon_pricing.png', alt: 'Competitive Pricing' %>
+        <h3>Competitive Pricing</h3>
+      </li>
+      <li>
+        <%= image_pack_tag 'media/images/icon_quote.png', alt: 'Free quotes' %>
+        <h3>Free no obligations quotes</h3>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="grey-arrow"></div>
+<div class="services">
+  <div class="inner">
+    <h2 class="main-heading">Our Services</h2>
+    <div class="service-tiles">
+      <div class="service-tile-row">
+        <div class="tile">
+          <%= link_to page_route('tiling') do %>
+            <%= image_pack_tag 'media/images/category_tiling.jpg', alt: 'Tiling' %>
+            <span>
+              Tiling
+              <%= fa_icon "chevron-right" %>
+            </span>
+          <% end %>
+        </div>
+        <div class="tile">
+          <%= link_to page_route('slating') do %>
+            <%= image_pack_tag 'media/images/category_slating.jpg', alt: 'Slating' %>
+            <span>
+              Slating
+              <%= fa_icon "chevron-right" %>
+            </span>
+          <% end %>
+        </div>
+      </div>
+      <div class="service-tile-row">
+        <div class="tile">
+          <%= link_to page_route('leadwork') do %>
+            <%= image_pack_tag 'media/images/category_leadwork.jpg', alt: 'Leadwork' %>
+            <span>
+              Leadwork
+              <%= fa_icon "chevron-right" %>
+            </span>
+          <% end %>
+        </div>
+        <div class="tile">
+          <%= link_to page_route('velux-windows') do %>
+            <%= image_pack_tag 'media/images/category_velux.jpg', alt: 'Velux Windows' %>
+            <span>
+              Velux Windows
+              <%= fa_icon "chevron-right" %>
+            </span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="customer-satisfaction">
+  <div class="inner">
+    <h2 class="main-heading">Customer Satisfaction</h2>
+    <%= link_to 'More reviews', page_route('testimonials'), class: 'button more-reviews' %>
+    <div class="quotes">
+      <% @testimonials.each do |testimonial| %>
+        <div>
+          <h5>
+            <%= fa_icon "quote-left" %>
+            <%= testimonial.content %>
+            <%= fa_icon "quote-right" %>
+          </h5>
+          <p>- <%= testimonial.author %>, Satisfied Customer</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="grey-arrow"></div>
+<div class="get-in-touch">
+  <div class="inner">
+    <h2 class="main-heading">Get in Touch</h2>
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <p>Here at Cousins Roofing no job is too big or small. Repairs to your roof are vital to keeping the weather on the <i>outside</i> of your house.</p>
+        <p>We offer a range of services including tile/slate replacement, lead repairs/replacement, ridge, valley and hip repairs and chimney re-pointing.</p>
+        <p><strong>Please do not hesitate to call no matter the problem.</strong></p>
+        <%= image_pack_tag 'media/images/get_in_touch_1.jpg', alt: 'Get in touch' %>
+      </div>
+      <div class="contact-right">
+        <div class="contact-images">
+          <%= image_pack_tag 'media/images/get_in_touch_2.jpg', alt: 'Get in touch' %>
+          <%= image_pack_tag 'media/images/get_in_touch_3.jpg', alt: 'Get in touch' %>
+        </div>
+        <div class="contact-text">
+          <h4>Call 07774 324872 for a FREE no obligation quote!</h4>
+        </div>
+        <div class="contact-images">
+          <%= image_pack_tag 'media/images/get_in_touch_4.jpg', alt: 'Get in touch' %>
+          <%= image_pack_tag 'media/images/get_in_touch_5.jpg', alt: 'Get in touch' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

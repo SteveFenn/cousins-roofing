@@ -41,10 +41,12 @@
     fade: true,
     cssEase: 'linear'
   });
-  $(".mobile-menu").click(function() {
+  $(".mobile-menu").click(function(e) {
+    e.preventDefault();
     $(".navigation").toggleClass("mobile-open");
   });
-  $(".mobile-close").click(function() {
+  $(".mobile-close").click(function(e) {
+    e.preventDefault();
     $(".navigation").toggleClass("mobile-open");
   });
 }());
