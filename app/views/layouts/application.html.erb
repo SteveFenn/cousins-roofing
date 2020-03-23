@@ -1,12 +1,267 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="">
+
   <head>
-    <title>CousinsRoofing</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <%= stylesheet_pack_tag "bundle", media: "all", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <div class="header">
+        <div class="inner">
+          <div class="logo">
+            <h1>Cousins Roofing</h1>
+          </div>
+          <div class="info">
+            <span>
+              <a href="mailto:info@cousinsroofing.co.uk">
+                <i class="fas fa-envelope"></i><span>info@cousinsroofing.co.uk</span>
+              </a>
+            </span>
+            <span>
+              <a href="tel:07774324872">
+                <i class="fas fa-phone-alt"></i><span>07774 324872</span>
+              </a>
+            </span>
+            <span class="mobile-menu">
+              <a href="#">
+                <i class="fas fa-bars"></i>
+              </a>
+            </span>
+          </div>
+          <div class="navigation">
+            <i class="fas fa-times mobile-close"></i>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Tiling</a></li>
+              <li><a href="#">Slating</a></li>
+              <li><a href="#">Leadwork</a></li>
+              <li><a href="#">Velux Windows</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="inner">
+          <div class="slider">
+            <div class="slick-slider">
+              <div>
+                <img src="img/slide_1.jpg" alt="Over 40 years Successful Trading" />
+              </div>
+              <div>
+                <img src="img/slide_2.jpg" alt="Over 40 years Successful Trading" />
+              </div>
+            </div>
+          </div>
+          <div class="feature-text">
+            <h2>Over 40 Years Successful Trading</h2>
+            <p>Cousins Roofing is a leading Buckinghamshire based family run business with a broad range of expertise in all aspects of roofing services</p>
+            <a class="button" href="#">Get a free quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="features">
+        <div class="inner">
+          <ul>
+            <li>
+              <img src="img/icon_materials.png" alt="Best Materials" />
+              <h3>Only the Best Materials</h3>
+            </li>
+            <li>
+              <img src="img/icon_pricing.png" alt="Competitive Pricing" />
+              <h3>Competitive Pricing</h3>
+            </li>
+            <li>
+              <img src="img/icon_quote.png" alt="Free quotes" />
+              <h3>Free no obligations quotes</h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grey-arrow"></div>
+      <div class="services">
+        <div class="inner">
+          <h2 class="main-heading">Our Services</h2>
+          <div class="service-tiles">
+            <div class="service-tile-row">
+              <div class="tile">
+                <a href="#">
+                  <img src="img/category_tiling.jpg" alt="Tiling" />
+                  <span>
+                    Tiling
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="tile">
+                <a href="#">
+                  <img src="img/category_slating.jpg" alt="Slating" />
+                  <span>
+                    Slating
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="service-tile-row">
+              <div class="tile">
+                <a href="#">
+                  <img src="img/category_leadwork.jpg" alt="Leadwork" />
+                  <span>
+                    Leadwork
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="tile">
+                <a href="#">
+                  <img src="img/category_velux.jpg" alt="Velux Windows" />
+                  <span>
+                    Velux Windows
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="customer-satisfaction">
+        <div class="inner">
+          <h2 class="main-heading">Customer Satisfaction</h2>
+          <a href="#" class="button more-reviews">More reviews</a>
+          <div class="quotes">
+            <div>
+              <h5>
+                <i class="fas fa-quote-left"></i>
+                We have used Cousins Roofing for many years on our more <strong>difficult roofing projects</strong>. They are <strong>extremely professional</strong> and the work they do is to an extremely <strong>high standard</strong>.
+                <i class="fas fa-quote-right"></i>
+              </h5>
+              <p>- Jordan.A, Satisfied Customer</p>
+            </div>
+            <div>
+              <h5>
+                <i class="fas fa-quote-left"></i>
+                His <strong>attention to detail</strong> is fantastic, he <strong>works quickly and efficiently</strong> and to top if off is a nice guy as well. If you want a roofer to come when they say they will come and do a <strong>great job</strong> for a <strong>fair price</strong> then I can't recommend Cousins Roofing enough.
+                <i class="fas fa-quote-right"></i>
+              </h5>
+              <p>- Jon, Satisfied Customer</p>
+            </div>
+            <div>
+              <h5>
+                <i class="fas fa-quote-left"></i>
+                Cousins Roofing have done a number of projects for me now and <strong>I can't recommend them highly enough</strong>. They are <strong>reliable, hard working, friendly</strong> and most importantly do a <strong>superb job</strong>.
+                <i class="fas fa-quote-right"></i>
+              </h5>
+              <p>- Geoff.B, Satisfied Customer</p>
+            </div>
+            <div>
+              <h5>
+                <i class="fas fa-quote-left"></i>
+                <strong>Amazing work</strong> carried out swiftly and to a very <strong>high standard</strong>. I definitely recommend Cousins Roofing to anyone who wants <strong>quality results</strong> at <strong>unbeatable prices</strong>. Thanks for a <strong>great job!</strong>
+                <i class="fas fa-quote-right"></i>
+              </h5>
+              <p>- J.Jeffrey, Satisfied Customer</p>
+            </div>
+            <div>
+              <h5>
+                <i class="fas fa-quote-left"></i>
+                Dale and his team are <strong>very skilled, punctual</strong> and <strong>take care</strong> and <strong>pride in the work</strong>. I would <strong>highly recommend</strong> Cousins Roofing.
+                <i class="fas fa-quote-right"></i>
+              </h5>
+              <p>- J.Alder, Satisfied Customer</p>
+            </div>
+            <div>
+              <h5>
+                <i class="fas fa-quote-left"></i>
+                If you need roofing advice, repairs or a complete new roof, they are <strong>certainly the company to be involved</strong>. I must say <strong>a big thank you</strong> to Dale who runs the company and <strong>long may our working relationship continue</strong>.
+                <i class="fas fa-quote-right"></i>
+              </h5>
+              <p>- G.Branwhite, Satisfied Customer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grey-arrow"></div>
+      <div class="get-in-touch">
+        <div class="inner">
+          <h2 class="main-heading">Get in Touch</h2>
+          <div class="contact-wrapper">
+            <div class="contact-left">
+              <p>Here at Cousins Roofing no job is too big or small. Repairs to your roof are vital to keeping the weather on the <i>outside</i> of your house.</p>
+              <p>We offer a range of services including tile/slate replacement, lead repairs/replacement, ridge, valley and hip repairs and chimney re-pointing.</p>
+              <p><strong>Please do not hesitate to call no matter the problem.</strong></p>
+              <img src="img/get_in_touch_1.jpg" alt="Get in touch" />
+            </div>
+            <div class="contact-right">
+              <div class="contact-images">
+                <img src="img/get_in_touch_2.jpg" alt="Call 07774 324872" />
+                <img src="img/get_in_touch_3.jpg" alt="Call 07774 324872" />
+              </div>
+              <div class="contact-text">
+                <h4>Call 07774 324872 for a FREE no obligation quote!</h4>
+              </div>
+              <div class="contact-images">
+                <img src="img/get_in_touch_4.jpg" alt="Call 07774 324872" />
+                <img src="img/get_in_touch_5.jpg" alt="Call 07774 324872" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="inner">
+          <div class="footer-block footer-about-us">
+            <h4>About us</h4>
+            <p>Cousins Roofing is a leading Buckinghamshire based family run business with a broad range of expertise in all aspects of roofing services. No job is too big or too small.</p>
+          </div>
+          <div class="footer-right">
+            <div class="footer-block footer-services">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">Tiling</a></li>
+                <li><a href="#">Slating</a></li>
+                <li><a href="#">Leadwork</a></li>
+                <li><a href="#">Velux Windows</a></li>
+                <li><a href="#">Chimney re-pointing</a></li>
+                <li><a href="#">Ridge, valley & hip repairs</a></li>
+              </ul>
+            </div>
+            <div class="footer-block footer-contact-us">
+              <h4>Contact us</h4>
+              <p>
+                <strong>Tel No</strong>
+                07774 324872
+              </p>
+              <p>
+                <strong>Email</strong>
+                <a href="mailto:cousinsdale@hotmail.com">cousinsdale@hotmail.com</a>
+              </p>
+              <div class="contact-links">
+                <a class="button free-quote" href="#">Get a free quote</a>
+                <a href="#" class="facebook"><img src="img/facebook.png" alt="Facebook" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="design-footer">
+        <div class="inner">
+          <p>Website by <span>Kayode</span>sign</p>
+        </div>
+      </div>
+    </div>
+    <%= javascript_pack_tag "bundle", 'data-turbolinks-track': "reload" %>
   </body>
+
 </html>
+

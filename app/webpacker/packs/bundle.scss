@@ -1,0 +1,6 @@
+@import '../src/stylesheets/normalize';
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
+@import '../src/stylesheets/slick';
+@import '../src/stylesheets/slick-theme';
+@import '../src/stylesheets/application';
